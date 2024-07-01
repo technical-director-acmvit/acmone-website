@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../../ui/components/Navbar";
+import Navbar from "../../ui/elements/Navbar";
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <div
       className="flex flex-col bg-white h-screen w-full bg-fixed bg-no-repeat"
@@ -24,4 +24,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default HomePage;
