@@ -1,8 +1,10 @@
-import RootLayout from "@/app/layout";
+import About from '@/app/components/About/about'
+import React from 'react'
 
-
-const AboutPage = () => {
-  
-};
-
-export default AboutPage;
+export default function Page() {
+  return (
+    <div>
+      <About/>
+    </div>
+  )
+}

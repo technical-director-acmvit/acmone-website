@@ -1,21 +1,10 @@
-import { Fragment } from "react";
-import Head from "next/head";
-import type { AppProps } from "next/app";
-import "./global.css";
+import Delete from '@/app/components/Delete/delete'
+import React from 'react'
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function page() {
   return (
-    <Fragment>
-      <Head>
-        <title>locofy-react-nextjs-project</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-      </Head>
-      <Component {...pageProps} />
-    </Fragment>
-  );
+    <div>
+      <Delete/>
+    </div>
+  )
 }
-
-export default MyApp;
