@@ -1,7 +1,12 @@
+import RootLayout from "@/app/layout";
 import About from "@/screens/AboutPage";
 
-export default function Home() {
-    return (
-        <About />
-    );
-}
+const AboutPage = () => {
+  return (
+    <RootLayout>
+      <About />
+    </RootLayout>
+  );
+};
+
+export default AboutPage;

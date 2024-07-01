@@ -1,7 +1,12 @@
-import HomePage from "@/screens/HomePage";
+import RootLayout from "@/app/layout";
+import About from "@/screens/AboutPage";
 
-export default function Home() {
-    return (
-        <HomePage />
-    );
-}
+const HomePage = () => {
+  return (
+    <RootLayout>
+      <About />
+    </RootLayout>
+  );
+};
+
+export default HomePage ;
