@@ -3,6 +3,7 @@ import Navbar from "../Navbar";
 
 export default function DownLoad() {
   return (
+    
     <div
       className="bg-gray-900 text-white min-h-screen flex flex-col justify-between bg-no-repeat"
       style={{
@@ -29,5 +30,6 @@ export default function DownLoad() {
         <p className="text-gray-400">Made with ♥ by ACM-VIT</p>
       </footer>
     </div>
+    
   );
 }

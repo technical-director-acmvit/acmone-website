@@ -3,15 +3,16 @@ import Navbar from "../Navbar";
 
 const Home = () => {
   return (
-    <div
+      
+      <div
       className="flex flex-col min-h-screen bg-white bg-fixed bg-no-repeat"
       style={{
-        backgroundImage:
+          backgroundImage:
           "url('/PinkSpreadPurpleStripes.svg'), url('/GreenDotsPurpleCircles.svg'), url('/TeamBrainstorming.svg'), url('/LogoB.svg')",
         backgroundPosition:
-          "top 130% right 112%, left 110% top 40%, center top 13%, center top 70%",
+        "top 130% right 112%, left 110% top 40%, center top 13%, center top 70%",
         backgroundSize: "25%, 21%, 22%, 22%",
-      }}
+    }}
     >
       <Navbar textColor="black" logoColor="black" />
       <div className="flex flex-col items-center mt-20 md:mt-96 font-serif text-center flex-1 justify-center">
