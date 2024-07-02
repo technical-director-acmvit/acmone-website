@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "../Navbar";
@@ -30,56 +30,56 @@ const About: React.FC = () => {
   };
 
   return (
-      <div className="bg-gray-900 text-white min-h-screen flex flex-col">
-        <Navbar logoColor="white" textColor="white" />
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col">
+      <Navbar logoColor="white" textColor="white" />
 
-        <main className="flex-grow flex items-center justify-center relative">
-          <button
-            className={`absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full ${
-              currentIndex === 0
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:bg-gray-900"
-            }`}
-            onClick={prevImage}
-            disabled={currentIndex === 0}
+      <main className="flex-grow flex items-center justify-center relative">
+        <button
+          className={`absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full ${
+            currentIndex === 0
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-gray-900"
+          }`}
+          onClick={prevImage}
+          disabled={currentIndex === 0}
+        >
+          ❮
+        </button>
+        <div className="relative w-full max-w-md overflow-hidden">
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
-            ❮
-          </button>
-          <div className="relative w-full max-w-screen-lg overflow-hidden">
-            <div
-              className="flex transition-transform duration-300 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  className="w-full flex-shrink-0 flex flex-col items-center justify-center"
-                  style={{ minWidth: "100%" }}
-                >
-                  <Image
-                    src={image.src}
-                    alt={`Slide ${index}`}
-                    width={200}
-                    height={150}
-                  />
-                  <p className="text-white text-xl mt-4">{image.text}</p>
-                </div>
-              ))}
-            </div>
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className="w-full flex-shrink-0 flex flex-col items-center justify-center"
+                style={{ minWidth: "100%" }}
+              >
+                <Image
+                  src={image.src}
+                  alt={`Slide ${index}`}
+                  width={200}
+                  height={150}
+                />
+                <p className="text-white text-xl mt-4">{image.text}</p>
+              </div>
+            ))}
           </div>
-          <button
-            className={`absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full ${
-              currentIndex === images.length - 1
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:bg-gray-900"
-            }`}
-            onClick={nextImage}
-            disabled={currentIndex === images.length - 1}
-          >
-            ❯
-          </button>
-        </main>
-      </div>
+        </div>
+        <button
+          className={`absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full ${
+            currentIndex === images.length - 1
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-gray-900"
+          }`}
+          onClick={nextImage}
+          disabled={currentIndex === images.length - 1}
+        >
+          ❯
+        </button>
+      </main>
+    </div>
   );
 };
 
