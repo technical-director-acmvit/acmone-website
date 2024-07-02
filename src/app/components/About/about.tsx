@@ -30,7 +30,15 @@ const About: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col">
+    
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col bg-no-repeat"
+    style={{
+      backgroundImage:
+      " url('/aboutleft.svg'),url('/aboutdown.svg')",
+    backgroundPosition:
+    "left 85%, right 100%",
+    backgroundSize: "15%, 35%",
+}}>
       <Navbar logoColor="white" textColor="white" />
 
       <main className="flex-grow flex items-center justify-center relative">
@@ -45,7 +53,7 @@ const About: React.FC = () => {
         >
           ❮
         </button>
-        <div className="relative w-full max-w-md overflow-hidden">
+        <div className="relative w-full max-w-3xl overflow-hidden">
           <div
             className="flex transition-transform duration-300 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -53,16 +61,19 @@ const About: React.FC = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="w-full flex-shrink-0 flex flex-col items-center justify-center"
+                className="w-full flex-shrink-0 flex items-center justify-center"
                 style={{ minWidth: "100%" }}
               >
-                <Image
-                  src={image.src}
-                  alt={`Slide ${index}`}
-                  width={200}
-                  height={150}
-                />
-                <p className="text-white text-xl mt-4">{image.text}</p>
+                <div className="flex-shrink-0">
+                  <Image
+                    src={image.src}
+                    alt={`Slide ${index}`}
+                    width={200}
+                    height={150}
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-white text-xl ml-8">{image.text}</p>
               </div>
             ))}
           </div>

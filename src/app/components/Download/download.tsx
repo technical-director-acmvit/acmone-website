@@ -21,7 +21,7 @@ export default function DownLoad() {
             <button className="bg-white text-black px-6 py-2 rounded-full mb-4 hover:bg-green-200">
               Download
             </button>
-            <p className="text-gray-400">Version: 1.0.0xx</p>
+            <p className="text-gray-400">Version: 1.0.0.1</p>
             <p className="text-gray-400">For IOS and ANDROID</p>
           </div>
         </div>
