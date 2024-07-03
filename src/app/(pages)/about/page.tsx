@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Page() {
   return (
-    <div>
-      <About/>
+    <div className='name="viewport" content="width=device-width, initial-scale=1.0'>
+      <About />
     </div>
-  )
+  );
 }

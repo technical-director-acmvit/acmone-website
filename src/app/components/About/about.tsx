@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "../Navbar";
@@ -31,14 +30,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <div
-      className="bg-gray-900 text-white min-h-screen flex flex-col bg-no-repeat"
-      style={{
-        backgroundImage: "url('/aboutleft.svg'),url('/aboutdown.svg')",
-        backgroundPosition: "left 85%, right 100%",
-        backgroundSize: "15%, 35%",
-      }}
-    >
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col bg-no-repeat">
       <Navbar logoColor="white" textColor="white" />
       <main className="flex-grow flex items-center justify-center relative">
         <button
@@ -49,10 +41,11 @@ const About: React.FC = () => {
           }`}
           onClick={prevImage}
           disabled={currentIndex === 0}
+          style={{ zIndex: 10, top: "50%" }}
         >
           ❮
         </button>
-        <div className="relative w-full max-w-3xl overflow-hidden">
+        <div className="relative w-full max-w-screen-xl mx-auto overflow-hidden">
           <div
             className="flex transition-transform duration-300 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -72,7 +65,9 @@ const About: React.FC = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-white text-xl ml-8">{image.text}</p>
+                <p className="text-white text-lg font-bold ml-4 md:ml-8 text-center">
+                  {image.text}
+                </p>
               </div>
             ))}
           </div>
@@ -85,6 +80,7 @@ const About: React.FC = () => {
           }`}
           onClick={nextImage}
           disabled={currentIndex === images.length - 1}
+          style={{ zIndex: 10, top: "50%" }}
         >
           ❯
         </button>
