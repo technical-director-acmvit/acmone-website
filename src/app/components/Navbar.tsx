@@ -12,9 +12,9 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor, textColor }) => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-8 flex justify-between items-center">
         <div className="pr-4 sm:pr-8">
           {logoColor === "black" ? (
-            <Image src="/LogoB.svg" alt="Logo" width={150} height={100} />
+            <Image src="/LogoBla.svg" alt="Logo" width={150} height={100} />
           ) : (
-            <Image src="/Logo.svg" alt="Logo" width={150} height={100} />
+            <Image src="/LogoW.svg" alt="Logo" width={150} height={100} />
           )}
         </div>
         <ul className="flex gap-6 list-none">
