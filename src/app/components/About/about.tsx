@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "../Navbar";
@@ -30,17 +31,15 @@ const About: React.FC = () => {
   };
 
   return (
-    
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col bg-no-repeat"
-    style={{
-      backgroundImage:
-      " url('/aboutleft.svg'),url('/aboutdown.svg')",
-    backgroundPosition:
-    "left 85%, right 100%",
-    backgroundSize: "15%, 35%",
-}}>
+    <div
+      className="bg-gray-900 text-white min-h-screen flex flex-col bg-no-repeat"
+      style={{
+        backgroundImage: "url('/aboutleft.svg'),url('/aboutdown.svg')",
+        backgroundPosition: "left 85%, right 100%",
+        backgroundSize: "15%, 35%",
+      }}
+    >
       <Navbar logoColor="white" textColor="white" />
-
       <main className="flex-grow flex items-center justify-center relative">
         <button
           className={`absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full ${

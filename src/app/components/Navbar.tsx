@@ -1,15 +1,15 @@
 import React from "react";
-import Image from "next/image";
-
 interface NavbarProps {
   logoColor: "black" | "white";
   textColor: "black" | "white";
 }
+import Image from "next/image";
+
 
 const Navbar: React.FC<NavbarProps> = ({ logoColor, textColor }) => {
   return (
-    <nav className="bg-transparent py-4">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <nav className="bg-transparent py-5">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-8 flex justify-between items-center">
         <div className="pr-4 sm:pr-8">
           {logoColor === "black" ? (
             <Image src="/LogoB.svg" alt="Logo" width={150} height={100} />
@@ -65,3 +65,5 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor, textColor }) => {
 };
 
 export default Navbar;
+
+
