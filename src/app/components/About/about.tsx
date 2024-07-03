@@ -30,21 +30,17 @@ const About: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col bg-no-repeat">
+    <div
+      className="bg-gray-900 text-white min-h-screen flex flex-col bg-no-repeat"
+      style={{
+        backgroundImage: "url(/Group2.svg)",
+        backgroundPosition: "right top 55%",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "19.5%",
+      }}
+    >
       <Navbar logoColor="white" textColor="white" />
-      <main className="flex-grow flex items-center justify-center relative">
-        <button
-          className={`absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full ${
-            currentIndex === 0
-              ? "opacity-50 cursor-not-allowed"
-              : "hover:bg-gray-900"
-          }`}
-          onClick={prevImage}
-          disabled={currentIndex === 0}
-          style={{ zIndex: 10 }}
-        >
-          ❮
-        </button>
+      <main className="flex-grow flex flex-col items-center justify-center relative">
         <div className="relative w-full max-w-screen-xl mx-auto overflow-hidden">
           <div
             className="flex transition-transform duration-300 ease-in-out"
@@ -53,15 +49,15 @@ const About: React.FC = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="w-full flex-shrink-0 flex items-center justify-center"
+                className="w-full flex-shrink-1 flex items-center justify-center"
                 style={{ minWidth: "100%" }}
               >
                 <div className="flex-shrink-1">
                   <Image
                     src={image.src}
                     alt={`Slide ${index}`}
-                    width={180}
-                    height={180}
+                    width={185}
+                    height={185}
                     className="object-contain"
                   />
                 </div>
@@ -72,18 +68,30 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-        <button
-          className={`absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full ${
-            currentIndex === images.length - 1
-              ? "opacity-50 cursor-not-allowed"
-              : "hover:bg-gray-900"
-          }`}
-          onClick={nextImage}
-          disabled={currentIndex === images.length - 1}
-          style={{ zIndex: 10 }}
-        >
-          ❯
-        </button>
+        <div className="flex mt-4 space-x-4">
+          <button
+            className={`bg-gray-800 text-white p-9 rounded-full ${
+              currentIndex === 0
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:bg-gray-900"
+            }`}
+            onClick={prevImage}
+            disabled={currentIndex === 0}
+          >
+            ❮
+          </button>
+          <button
+            className={`bg-gray-800 text-white p-9 rounded-full ${
+              currentIndex === images.length - 1
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:bg-gray-900"
+            }`}
+            onClick={nextImage}
+            disabled={currentIndex === images.length - 1}
+          >
+            ❯
+          </button>
+        </div>
       </main>
     </div>
   );
