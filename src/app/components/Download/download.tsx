@@ -15,7 +15,7 @@ export default function DownLoad() {
       <div className="flex flex-col flex-grow">
         <Navbar logoColor="white" textColor="white" />
         <main className="flex-grow flex items-center">
-          <div className="mx-4 sm:ml-10 sm:mt-30 md:ml-20">
+          <div className="mx-5 sm:ml-20 sm:mt-33 md:ml-30">
             <h1 className="text-2xl sm:text-3xl md:text-4xl mb-4">
               Download the APK now!
             </h1>
