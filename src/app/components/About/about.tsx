@@ -41,7 +41,7 @@ const About: React.FC = () => {
           }`}
           onClick={prevImage}
           disabled={currentIndex === 0}
-          style={{ zIndex: 10, top: "50%" }}
+          style={{ zIndex: 10 }}
         >
           ❮
         </button>
@@ -56,12 +56,12 @@ const About: React.FC = () => {
                 className="w-full flex-shrink-0 flex items-center justify-center"
                 style={{ minWidth: "100%" }}
               >
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-1">
                   <Image
                     src={image.src}
                     alt={`Slide ${index}`}
-                    width={200}
-                    height={150}
+                    width={180}
+                    height={180}
                     className="object-contain"
                   />
                 </div>
@@ -80,7 +80,7 @@ const About: React.FC = () => {
           }`}
           onClick={nextImage}
           disabled={currentIndex === images.length - 1}
-          style={{ zIndex: 10, top: "50%" }}
+          style={{ zIndex: 10 }}
         >
           ❯
         </button>

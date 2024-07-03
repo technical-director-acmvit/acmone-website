@@ -10,7 +10,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoColor, textColor }) => {
   return (
     <nav className="bg-transparent py-4 md:py-5">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 flex justify-between items-center">
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-1">
           {logoColor === "black" ? (
             <Image src="/LogoB.svg" alt="Logo" width={100} height={70} className="md:w-150 md:h-100" />
           ) : (
