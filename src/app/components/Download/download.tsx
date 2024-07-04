@@ -28,10 +28,11 @@ export default function DownLoad() {
                         </h1>
                         <div className="flex flex-col items-center space-y-4">
                             <button
+                                disabled
                                 onClick={downloadFile}
                                 className="bg-white text-black px-4 py-2 sm:px-6 sm:py-2 rounded-full mb-4 hover:bg-green-200"
                             >
-                                Download
+                                Coming soon...
                             </button>
                             <p className="text-gray-400 text-sm sm:text-base">
                                 Version: 1.0.0.1
