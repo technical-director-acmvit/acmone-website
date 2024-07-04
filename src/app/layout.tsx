@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "ACMOne",
     description: "ACM in ONE",
+    metadataBase: new URL("https://acm-one.acmvit.in/"),
 };
 
 export default function RootLayout({
