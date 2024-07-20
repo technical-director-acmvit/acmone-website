@@ -8,7 +8,7 @@ import { saveAs } from "file-saver";
 export default function DownLoad() {
     const downloadFile = () => {
         saveAs(
-            "https://github.com/technical-director-acmvit/acmone-website/releases/download/v1.0.0/ACMOne.v1.01.apk",
+            "https://github.com/technical-director-acmvit/acmone-website/releases/download/v1.0.0/ACMOne.v1.02.apk",
             "ACMOne.apk"
         );
     };
